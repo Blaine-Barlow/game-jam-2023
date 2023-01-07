@@ -27,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        SnakeMovement();
+        Movement();
     }
 
-    private void SnakeMovement()
+    private void Movement()
     {   
         Vector2 turnInput = _moveAction.ReadValue<Vector2>();
         // turnInput = [Horizontal, Vertical]
@@ -47,11 +47,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb_head.transform.Rotate(new Vector3(0, 0, -_turnSpeed * Time.deltaTime * turnInput[0]));
         }
-        if (_current_speed > _min_speed)
-        {
-            var scale = _current_speed / _min_speed > 2f ? 2f : _current_speed / _min_speed;
-            _rb_head.transform.localScale = new Vector3(scale, 1, 1);
-        }
+        // Dont need scaling
+        // if (_current_speed > _min_speed) 
+        // {
+        //     var scale = _current_speed / _min_speed > 2f ? 2f : _current_speed / _min_speed;
+        //     _rb_head.transform.localScale = new Vector3(scale, 1, 1);
+        // }
     } 
 
     void OnDrawGizmos()
