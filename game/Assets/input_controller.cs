@@ -28,45 +28,18 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
             ""id"": ""268d8aaa-b4d2-421f-896d-b309d3787073"",
             ""actions"": [
                 {
-                    ""name"": ""forward"",
-                    ""type"": ""Value"",
-                    ""id"": ""a3797bc4-aae6-46c2-af40-666622728aff"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""backward"",
-                    ""type"": ""Button"",
-                    ""id"": ""49626b9a-fd0d-42cb-9ae2-745efe243aa5"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Turn"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""95d7a530-5c88-4fec-95cc-3be13257f35a"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""rotate_left"",
+                    ""name"": ""Action"",
                     ""type"": ""Button"",
-                    ""id"": ""c9bc56de-aa26-45ac-8d66-316264c62f81"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""rotate_right"",
-                    ""type"": ""Button"",
-                    ""id"": ""dc1a2255-aa74-46e7-a8b7-309381050fa8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""action"",
-                    ""type"": ""Button"",
-                    ""id"": ""65d861d2-18c0-45f8-aeac-dc78674bd831"",
+                    ""id"": ""89b972fa-5c8e-4a02-8cad-2d88e390664b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -76,102 +49,69 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""d4763bfe-5c8d-452b-a560-64eb29ce27c4"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""forward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f66c033d-7cf1-462c-984d-391806895fa7"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""forward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3650634d-3772-4064-bd5e-e0393edf364a"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""backward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d40c6ceb-25d4-46e7-9405-c05f7d45bb3b"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""backward"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fe4eb520-9b30-4ee5-addd-66ced9919849"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""rotate_left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""83849cd4-1478-43bd-a1b8-ac3c52002c88"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""rotate_left"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d25ca70a-d2e2-4f6d-bff5-47a199930c55"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""rotate_right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""becd6f9e-46a1-4786-84eb-e5de77115288"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""rotate_right"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7027746d-adf7-43df-84fa-5c83b16235b5"",
+                    ""id"": ""2d993a26-2620-4178-9469-5df52b40dd36"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""action"",
+                    ""groups"": """",
+                    ""action"": ""Action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""57f02e36-e070-4df2-80c4-a45e06a121dd"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""41f773e4-8efa-457a-8749-b4465273e8ed"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d91aaf6f-7f95-4a03-863d-82226a92416e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8110fd97-c3dc-4c04-bc6a-f207a6010f1c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""60f9c1bc-1148-4dde-907e-7406608281c0"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Turn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -192,11 +132,8 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
 }");
         // main
         m_main = asset.FindActionMap("main", throwIfNotFound: true);
-        m_main_forward = m_main.FindAction("forward", throwIfNotFound: true);
-        m_main_backward = m_main.FindAction("backward", throwIfNotFound: true);
-        m_main_rotate_left = m_main.FindAction("rotate_left", throwIfNotFound: true);
-        m_main_rotate_right = m_main.FindAction("rotate_right", throwIfNotFound: true);
-        m_main_action = m_main.FindAction("action", throwIfNotFound: true);
+        m_main_Turn = m_main.FindAction("Turn", throwIfNotFound: true);
+        m_main_Action = m_main.FindAction("Action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -256,20 +193,14 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
     // main
     private readonly InputActionMap m_main;
     private IMainActions m_MainActionsCallbackInterface;
-    private readonly InputAction m_main_forward;
-    private readonly InputAction m_main_backward;
-    private readonly InputAction m_main_rotate_left;
-    private readonly InputAction m_main_rotate_right;
-    private readonly InputAction m_main_action;
+    private readonly InputAction m_main_Turn;
+    private readonly InputAction m_main_Action;
     public struct MainActions
     {
         private @Input_controller m_Wrapper;
         public MainActions(@Input_controller wrapper) { m_Wrapper = wrapper; }
-        public InputAction @forward => m_Wrapper.m_main_forward;
-        public InputAction @backward => m_Wrapper.m_main_backward;
-        public InputAction @rotate_left => m_Wrapper.m_main_rotate_left;
-        public InputAction @rotate_right => m_Wrapper.m_main_rotate_right;
-        public InputAction @action => m_Wrapper.m_main_action;
+        public InputAction @Turn => m_Wrapper.m_main_Turn;
+        public InputAction @Action => m_Wrapper.m_main_Action;
         public InputActionMap Get() { return m_Wrapper.m_main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -279,40 +210,22 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_MainActionsCallbackInterface != null)
             {
-                @forward.started -= m_Wrapper.m_MainActionsCallbackInterface.OnForward;
-                @forward.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnForward;
-                @forward.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnForward;
-                @backward.started -= m_Wrapper.m_MainActionsCallbackInterface.OnBackward;
-                @backward.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnBackward;
-                @backward.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnBackward;
-                @rotate_left.started -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_left;
-                @rotate_left.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_left;
-                @rotate_left.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_left;
-                @rotate_right.started -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_right;
-                @rotate_right.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_right;
-                @rotate_right.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnRotate_right;
-                @action.started -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
-                @action.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
-                @action.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
+                @Turn.started -= m_Wrapper.m_MainActionsCallbackInterface.OnTurn;
+                @Turn.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnTurn;
+                @Turn.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnTurn;
+                @Action.started -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
+                @Action.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
+                @Action.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
             }
             m_Wrapper.m_MainActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @forward.started += instance.OnForward;
-                @forward.performed += instance.OnForward;
-                @forward.canceled += instance.OnForward;
-                @backward.started += instance.OnBackward;
-                @backward.performed += instance.OnBackward;
-                @backward.canceled += instance.OnBackward;
-                @rotate_left.started += instance.OnRotate_left;
-                @rotate_left.performed += instance.OnRotate_left;
-                @rotate_left.canceled += instance.OnRotate_left;
-                @rotate_right.started += instance.OnRotate_right;
-                @rotate_right.performed += instance.OnRotate_right;
-                @rotate_right.canceled += instance.OnRotate_right;
-                @action.started += instance.OnAction;
-                @action.performed += instance.OnAction;
-                @action.canceled += instance.OnAction;
+                @Turn.started += instance.OnTurn;
+                @Turn.performed += instance.OnTurn;
+                @Turn.canceled += instance.OnTurn;
+                @Action.started += instance.OnAction;
+                @Action.performed += instance.OnAction;
+                @Action.canceled += instance.OnAction;
             }
         }
     }
@@ -328,10 +241,7 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
     }
     public interface IMainActions
     {
-        void OnForward(InputAction.CallbackContext context);
-        void OnBackward(InputAction.CallbackContext context);
-        void OnRotate_left(InputAction.CallbackContext context);
-        void OnRotate_right(InputAction.CallbackContext context);
+        void OnTurn(InputAction.CallbackContext context);
         void OnAction(InputAction.CallbackContext context);
     }
 }
