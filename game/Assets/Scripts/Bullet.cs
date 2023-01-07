@@ -12,9 +12,14 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void PassInfo(Vector2 direction){
+    // private void Start() {
+    //     rb.velocity = direction * speed;
+    // }
+    public void PassInfo(Vector3 direction){
+        Debug.Log(direction);
         rb.velocity = direction * speed;
         Destroy(this.gameObject, lifetime);
     }
+
 
 }

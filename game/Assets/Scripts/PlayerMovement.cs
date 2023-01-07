@@ -11,23 +11,30 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _acceleration = 25;
     private float _current_speed;
     private PlayerInput _playerInput;
+    private InputAction _fire_action;
     private InputAction _moveAction;
+    public Bullet bullet;
 
     private Rigidbody2D _rb_head;
     private void Awake() {
         _playerInput = GetComponent<PlayerInput>();
         _rb_head = GetComponent<Rigidbody2D>();
+        _fire_action = _playerInput.actions["Action"];
+
         _moveAction = _playerInput.actions["Turn"];
     }
 
     void Start()
     {
         _current_speed = _min_speed;
+        _fire_action.performed += _ => shoot();
+        
     }
 
     void FixedUpdate()
     {
         Movement();
+       
     }
 
     private void Movement()
@@ -55,9 +62,8 @@ public class PlayerMovement : MonoBehaviour
         // }
     } 
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawRay(this.transform.position, _rb_head.velocity.normalized * 5);    
-    }  
+    public void shoot(){
+        var tempBullet = Instantiate(bullet, this.transform.position, this.transform.rotation);
+        tempBullet.PassInfo(this.transform.rotation * Vector3.right);
+    }
 }
