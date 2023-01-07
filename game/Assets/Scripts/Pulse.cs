@@ -6,24 +6,41 @@ public class Pulse : MonoBehaviour
 {
     [SerializeField]
     private float expansionRate;
-    private SpriteRenderer renderer; 
+    private SpriteRenderer rend; 
+    private CircleCollider2D circleCollider;
+    private Sprite lastSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        rend = GetComponent<SpriteRenderer>();
+        circleCollider = GetComponent<CircleCollider2D>();
+        UpdateColliderSize();
+        Destroy(this.gameObject, 2);
     }
 
     private void FixedUpdate() {
         this.transform.localScale += new Vector3(expansionRate, expansionRate, 0);
-        Color tmp = renderer.color;
+        if (rend.sprite != lastSprite) {
+            UpdateColliderSize();
+        }
+        Color tmp = rend.color;
         tmp.a -= .01f;
-        renderer.color = tmp;
+        rend.color = tmp;
     }
+
+    private void UpdateColliderSize() {
+    Vector3 spriteHalfSize = rend.sprite.bounds.extents;
+    circleCollider.radius = spriteHalfSize.x > spriteHalfSize.y ? spriteHalfSize.x : spriteHalfSize.y;
+    lastSprite = rend.sprite;
+}
+
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "asteroid") {
-            Debug.Log("Found Asteroid");
+            // Debug.Log("Found Asteroid");
+            other.GetComponent<SpriteRenderer>().color = new Color(255,255,255,1);
+
         }
     }
 }

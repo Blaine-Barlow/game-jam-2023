@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     private InputAction _fire_action;
     private InputAction _moveAction;
     public Bullet bullet;
+    public GameObject pulse;
+    private AudioSource audiosource;
 
     private Rigidbody2D _rb_head;
     private void Awake() {
         _playerInput = GetComponent<PlayerInput>();
         _rb_head = GetComponent<Rigidbody2D>();
+        audiosource = GetComponent<AudioSource>();
         _fire_action = _playerInput.actions["Action"];
 
         _moveAction = _playerInput.actions["Turn"];
@@ -28,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _current_speed = _min_speed;
         _fire_action.performed += _ => shoot();
-        
+        InvokeRepeating("createPulse", 1.0f, 4.0f);
     }
 
     void FixedUpdate()
@@ -65,5 +68,10 @@ public class PlayerMovement : MonoBehaviour
     public void shoot(){
         var tempBullet = Instantiate(bullet, this.transform.position, this.transform.rotation);
         tempBullet.PassInfo(this.transform.rotation * Vector3.right);
+    }
+
+    public void createPulse(){
+        Instantiate(pulse, this.transform.position, this.transform.rotation);
+        audiosource.Play();
     }
 }
