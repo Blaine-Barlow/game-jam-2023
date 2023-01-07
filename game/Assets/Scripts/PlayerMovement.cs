@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         //     _rb_head.transform.localScale = new Vector3(scale, 1, 1);
         // }
     } 
-
+// New change
     public void shoot(){
         var tempBullet = Instantiate(bullet, this.transform.position, this.transform.rotation);
         tempBullet.PassInfo(this.transform.rotation * Vector3.right);
