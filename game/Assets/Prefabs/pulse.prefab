@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3407408107015800685}
   - component: {fileID: 3407408107015800687}
   - component: {fileID: 3407408107015800686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}

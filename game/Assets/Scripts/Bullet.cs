@@ -16,10 +16,16 @@ public class Bullet : MonoBehaviour
     //     rb.velocity = direction * speed;
     // }
     public void PassInfo(Vector3 direction){
-        Debug.Log(direction);
+        // Debug.Log(direction);
         rb.velocity = direction * speed;
         Destroy(this.gameObject, lifetime);
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "asteroid") {
+            other.GetComponent<Asteroid>().hit();
+            Destroy(this.gameObject);
+        }
+    }
 
 }

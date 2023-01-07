@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5866054970121121826}
   - component: {fileID: 5866054970121121827}
   - component: {fileID: 5866054970121121828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5866054970121121831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2281, y: -0.3039, z: 0}
-  m_LocalScale: {x: 0.095902756, y: 0.103103206, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9c9adc8e87e2d244b206a3886584b8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

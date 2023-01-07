@@ -74,4 +74,6 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(pulse, this.transform.position, this.transform.rotation);
         audiosource.Play();
     }
+
+    
 }

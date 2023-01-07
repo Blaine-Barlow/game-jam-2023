@@ -21,6 +21,8 @@ public class Asteroid : MonoBehaviour
     private Rigidbody2D _rigidbody;
 
     public float xAngle, yAngle;
+    private int life;
+    public GameObject drop;
 
     private void Awake() {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -42,10 +44,27 @@ public class Asteroid : MonoBehaviour
 
         Destroy(this.gameObject, this.maxLifetime);
     }
+    
+    public void setLife(int newlife) {
+        life = newlife;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         this.transform.Rotate(0, 0, xAngle, Space.Self);
     }
+
+    public void hit() {
+        life -= 1;
+        if (life == 0) {
+            destroyMe();
+        }
+    }
+
+    private void destroyMe() {
+        Instantiate(drop, this.transform.position, this.transform.rotation);
+        Destroy(this.gameObject);
+    }
+
 }
