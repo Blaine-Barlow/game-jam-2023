@@ -13,7 +13,8 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnDistance = 15.0f;
 
     // PowerUps
-    public PowerUp powerUpPrefab;
+    // public PowerUp powerUpPrefab;
+    public Powerup2[] powerups;
     public float powerUpSpawnRate = 1000.0f;
 
 
@@ -49,8 +50,9 @@ public class AsteroidSpawner : MonoBehaviour
             float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
 
-            PowerUp powerUp = Instantiate(this.powerUpPrefab, spawnPoint, rotation);
-            powerUp.size = Random.Range(powerUp.size, powerUp.size);
+            int temp = Random.Range(0, powerups.Length);
+            Powerup2 powerUp = Instantiate(powerups[temp], spawnPoint, rotation);
+            // powerUp.size = Random.Range(powerUp.size, powerUp.size);
             powerUp.SetTrajectory(rotation * -spawnDirection);
         }
     }

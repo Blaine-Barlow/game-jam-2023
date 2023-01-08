@@ -28,7 +28,7 @@ public class Asteroid2 : MonoBehaviour
     // private Sprite lastSprite;
 
     private void Awake() {
-        // _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
@@ -68,10 +68,19 @@ public class Asteroid2 : MonoBehaviour
     }
 
     private void destroyMe() {
-        Instantiate(drop, this.transform.position, this.transform.rotation);
+        GetComponent<AudioSource>().Play();
+        int howManyDrops = Random.Range(1, 4);
+        for (int i = 0; i < howManyDrops; i++) {
+            GameObject myDrop = Instantiate(drop, this.transform.position, this.transform.rotation);
+            int x = Random.Range(0,100);
+            int y = Random.Range(0, 100);
+            Vector2 v2 = new Vector2(x,y);
+            myDrop.GetComponent<PowerUp>().SetTrajectory(v2.normalized);
+        }
         var temp = Instantiate(explosion, this.transform.position, this.transform.rotation);
+        _spriteRenderer.enabled = false;
         Destroy(temp, 3);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 1);
     }
 
     // private void UpdateColliderSize() {
