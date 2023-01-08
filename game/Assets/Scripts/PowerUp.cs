@@ -49,6 +49,10 @@ public class PowerUp : MonoBehaviour
             Debug.Log("Hit Player");
             // Game Manager
 
+            GameObject gm =  GameObject.FindWithTag("gameManager");
+            // gm.updateScore(1);
+            gm.GetComponent<GameManager>().updateScore(1);
+
 
 
             Destroy(this.gameObject);
