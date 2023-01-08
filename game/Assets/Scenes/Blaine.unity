@@ -146,11 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1986387288246792501, guid: c0acd2dd765d14540bfba3240e119d24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1986387288246792501, guid: c0acd2dd765d14540bfba3240e119d24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.91
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1986387288246792501, guid: c0acd2dd765d14540bfba3240e119d24, type: 3}
       propertyPath: m_LocalPosition.z
@@ -198,9 +198,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
+      propertyPath: powerups.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
       propertyPath: asteroids.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
+      propertyPath: powerups.Array.data[0]
+      value: 
+      objectReference: {fileID: 6464200913820001731, guid: 32114b99e9b06e942a8e59dbb984f4c1, type: 3}
+    - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
+      propertyPath: powerups.Array.data[1]
+      value: 
+      objectReference: {fileID: 2093814649166335475, guid: cc011a5eb85f3974c997470ccb383576, type: 3}
+    - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
+      propertyPath: powerups.Array.data[2]
+      value: 
+      objectReference: {fileID: 677453175129577523, guid: 3db53da0e27c5ee48a6bb2ec4af06927, type: 3}
     - target: {fileID: 3783228332340551957, guid: b27fb7f9c8283044b8af8fcc7979254f, type: 3}
       propertyPath: asteroids.Array.data[0]
       value: 
@@ -299,7 +315,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0eb4fb19da0156642a3a4c4bcc93de66, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7c1546764b6688a449e43aace70615f3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.139
   m_Pitch: 1
@@ -393,7 +409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174203123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.45361325, y: 1.6121373, z: -0.041232023}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -551,11 +567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5395582488909744799, guid: 26e636dbe73a8e14db44cfb647a7f720, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395582488909744799, guid: 26e636dbe73a8e14db44cfb647a7f720, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.91
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5395582488909744799, guid: 26e636dbe73a8e14db44cfb647a7f720, type: 3}
       propertyPath: m_LocalPosition.z
