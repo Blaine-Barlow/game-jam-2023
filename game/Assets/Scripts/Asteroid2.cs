@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Asteroid2 : MonoBehaviour
 {
-    public Sprite[] sprites;
+    // public Sprite[] sprites;
 
     public float size = 1.0f;
 
@@ -25,17 +25,17 @@ public class Asteroid : MonoBehaviour
     public GameObject drop;
     public GameObject explosion;
     private CircleCollider2D circleCollider;
-    private Sprite lastSprite;
+    // private Sprite lastSprite;
 
     private void Awake() {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        // _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>();
     }
 
     // Start is called before the first frame update
     private void Start() {
-        _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        // _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
@@ -46,7 +46,7 @@ public class Asteroid : MonoBehaviour
 
     public void SetTrajectory(Vector2 direction) {
         _rigidbody.AddForce(direction * this.speed);
-        UpdateColliderSize();
+        // UpdateColliderSize();
         Destroy(this.gameObject, this.maxLifetime);
     }
 
@@ -74,11 +74,11 @@ public class Asteroid : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    private void UpdateColliderSize() {
-        Vector3 spriteHalfSize = _spriteRenderer.sprite.bounds.extents;
-        // circleCollider.radius = spriteHalfSize.x > spriteHalfSize.y ? spriteHalfSize.x : spriteHalfSize.y;
-        // lastSprite = _spriteRenderer.sprite;
-        circleCollider.radius = spriteHalfSize.x;
-    }
+    // private void UpdateColliderSize() {
+    //     Vector3 spriteHalfSize = _spriteRenderer.sprite.bounds.extents;
+    //     // circleCollider.radius = spriteHalfSize.x > spriteHalfSize.y ? spriteHalfSize.x : spriteHalfSize.y;
+    //     // lastSprite = _spriteRenderer.sprite;
+    //     circleCollider.radius = spriteHalfSize.x;
+    // }
 
 }

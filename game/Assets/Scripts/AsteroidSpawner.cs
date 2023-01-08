@@ -5,7 +5,8 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour 
 {   
     // Asteroid
-    public Asteroid asteroidPrefab;
+    // public Asteroid asteroidPrefab;
+    public Asteroid2[] asteroids;
     public float trajectoryVariance = 15.0f;
     public float spawnRate = 2.0f;
     public int spawnAmount = 1;
@@ -30,8 +31,8 @@ public class AsteroidSpawner : MonoBehaviour
 
             float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
-
-            Asteroid asteroid = Instantiate(this.asteroidPrefab, spawnPoint, rotation);
+            int temp = Random.Range(0, asteroids.Length);
+            Asteroid2 asteroid = Instantiate(asteroids[temp], spawnPoint, rotation);
             asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
             asteroid.setLife(1);
             // if (asteroid.size > 1) {asteroid.setLife(2);}
