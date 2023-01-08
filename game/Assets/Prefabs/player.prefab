@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _min_speed: 25
   _max_speed: 350
-  _turnSpeed: 100
+  _turnSpeed: 180
   _acceleration: 5
   bullet: {fileID: 0}
+  pulse: {fileID: 0}
