@@ -36,7 +36,7 @@ public class Asteroid : MonoBehaviour
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
-        _rigidbody.mass = this.size;
+        _rigidbody.mass = this.size * 1.5f;
     }
 
     public void SetTrajectory(Vector2 direction) {
@@ -44,7 +44,7 @@ public class Asteroid : MonoBehaviour
 
         Destroy(this.gameObject, this.maxLifetime);
     }
-    
+
     public void setLife(int newlife) {
         life = newlife;
     }

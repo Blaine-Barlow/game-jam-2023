@@ -10,6 +10,7 @@ public class Pulse : MonoBehaviour
     private CircleCollider2D circleCollider;
     private Sprite lastSprite;
 
+    private Color[] colors = { new Color(.48f, .21f, .01f, 1.0f), new Color(0.1f,0.1f,0.1f, 1.0f)};
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,8 @@ public class Pulse : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "asteroid") {
             // Debug.Log("Found Asteroid");
-            other.GetComponent<SpriteRenderer>().color = new Color(255,255,255,1);
+            int temp = Random.Range(0,2);
+            other.GetComponent<SpriteRenderer>().color = colors[temp];
 
         }
     }
