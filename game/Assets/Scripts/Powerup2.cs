@@ -48,7 +48,9 @@ public class Powerup2 : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             // Debug.Log("Hit Player");
             // Game Manager
-
+            GameObject gm =  GameObject.FindWithTag("gameManager");
+            // gm.updateScore(1);
+            gm.GetComponent<GameManager>().updateScore(100);
 
 
             Destroy(this.gameObject);

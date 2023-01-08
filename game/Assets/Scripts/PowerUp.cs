@@ -46,12 +46,12 @@ public class PowerUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
-            Debug.Log("Hit Player");
+            // Debug.Log("Hit Player");
             // Game Manager
 
             GameObject gm =  GameObject.FindWithTag("gameManager");
             // gm.updateScore(1);
-            gm.GetComponent<GameManager>().updateScore(1);
+            gm.GetComponent<GameManager>().updateScore(50);
 
 
 
