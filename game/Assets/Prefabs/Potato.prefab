@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 677453175129577533}
   m_Layer: 0
   m_Name: Potato
-  m_TagString: Untagged
+  m_TagString: powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

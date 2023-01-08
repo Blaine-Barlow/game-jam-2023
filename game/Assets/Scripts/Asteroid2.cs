@@ -40,7 +40,7 @@ public class Asteroid2 : MonoBehaviour
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
-        _rigidbody.mass = this.size * 1.5f;
+        _rigidbody.mass = this.size * 3f;
         
     }
 
@@ -80,7 +80,7 @@ public class Asteroid2 : MonoBehaviour
         var temp = Instantiate(explosion, this.transform.position, this.transform.rotation);
         _spriteRenderer.enabled = false;
         Destroy(temp, 3);
-        Destroy(this.gameObject, 1);
+        Destroy(this.gameObject,1);
     }
 
     // private void UpdateColliderSize() {

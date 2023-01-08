@@ -8,20 +8,20 @@ public class AsteroidSpawner : MonoBehaviour
     // public Asteroid asteroidPrefab;
     public Asteroid2[] asteroids;
     public float trajectoryVariance = 15.0f;
-    public float spawnRate = 2.0f;
+    public float spawnRate = 1.8f;
     public int spawnAmount = 1;
-    public float spawnDistance = 15.0f;
+    public float spawnDistance = 25.0f;
 
     // PowerUps
     // public PowerUp powerUpPrefab;
     public Powerup2[] powerups;
-    public float powerUpSpawnRate = 1000.0f;
+    // public float powerUpSpawnRate = 750.0f;
 
 
     // Start is called before the first frame update
     void Start() {
-        InvokeRepeating(nameof(Spawn), this.spawnRate, this.spawnRate);
-        InvokeRepeating(nameof(SpawnPowerUps), 1, 20.0f);
+        InvokeRepeating(nameof(Spawn), 1, this.spawnRate);
+        InvokeRepeating(nameof(SpawnPowerUps), 1, 5.0f);
     }
 
     private void Spawn() {

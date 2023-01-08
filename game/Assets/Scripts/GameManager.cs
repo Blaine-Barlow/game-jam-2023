@@ -46,6 +46,18 @@ public class GameManager : MonoBehaviour
     }
 
     public void restart(){
+        GameObject[] asteroids = GameObject.FindGameObjectsWithTag("asteroid");
+        foreach(GameObject gm in asteroids) {
+            Destroy(gm);
+        }
+        GameObject[] elements = GameObject.FindGameObjectsWithTag("element");
+        foreach (GameObject ele in elements) {
+            Destroy(ele);
+        }
+        GameObject[] powers = GameObject.FindGameObjectsWithTag("powerup");
+        foreach(GameObject pw in powers) {
+            Destroy(pw);
+        }
         currentTime = startingTime;
         Time.timeScale = 1;
         scoreValue = 0;

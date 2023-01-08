@@ -40,7 +40,7 @@ public class Asteroid : MonoBehaviour
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
-        _rigidbody.mass = this.size * 2.5f;
+        _rigidbody.mass = this.size * 10f;
         
     }
 

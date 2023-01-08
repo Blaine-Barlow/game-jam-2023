@@ -193,9 +193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48eafc5d7641a4c499bcec609c81c2f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _min_speed: 25
-  _max_speed: 350
-  _turnSpeed: 180
+  _min_speed: 50
+  _max_speed: 500
+  _turnSpeed: 250
   _acceleration: 5
   bullet: {fileID: 5866054970121121828, guid: 850292ae5689ac244b9d55ac686b5bf6, type: 3}
   pulse: {fileID: 3407408107015800674, guid: 8614d13709122564b96343c7bb33a4e4, type: 3}
