@@ -5,14 +5,16 @@ using UnityEngine;
 public class AsteroidSpawner : MonoBehaviour 
 {   
     // Asteroid
-    public Asteroid asteroidPrefab;
+    // public Asteroid asteroidPrefab;
+    public Asteroid2[] asteroids;
     public float trajectoryVariance = 15.0f;
     public float spawnRate = 2.0f;
     public int spawnAmount = 1;
     public float spawnDistance = 15.0f;
 
     // PowerUps
-    public PowerUp powerUpPrefab;
+    // public PowerUp powerUpPrefab;
+    public Powerup2[] powerups;
     public float powerUpSpawnRate = 1000.0f;
 
 
@@ -30,8 +32,8 @@ public class AsteroidSpawner : MonoBehaviour
 
             float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
-
-            Asteroid asteroid = Instantiate(this.asteroidPrefab, spawnPoint, rotation);
+            int temp = Random.Range(0, asteroids.Length);
+            Asteroid2 asteroid = Instantiate(asteroids[temp], spawnPoint, rotation);
             asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
             asteroid.setLife(1);
             // if (asteroid.size > 1) {asteroid.setLife(2);}
@@ -48,8 +50,9 @@ public class AsteroidSpawner : MonoBehaviour
             float variance = Random.Range(-trajectoryVariance, trajectoryVariance);
             Quaternion rotation = Quaternion.AngleAxis(variance, Vector3.forward);
 
-            PowerUp powerUp = Instantiate(this.powerUpPrefab, spawnPoint, rotation);
-            powerUp.size = Random.Range(powerUp.size, powerUp.size);
+            int temp = Random.Range(0, powerups.Length);
+            Powerup2 powerUp = Instantiate(powerups[temp], spawnPoint, rotation);
+            // powerUp.size = Random.Range(powerUp.size, powerUp.size);
             powerUp.SetTrajectory(rotation * -spawnDirection);
         }
     }

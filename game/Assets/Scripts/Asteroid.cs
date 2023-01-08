@@ -23,10 +23,14 @@ public class Asteroid : MonoBehaviour
     public float xAngle, yAngle;
     private int life;
     public GameObject drop;
+    public GameObject explosion;
+    private CircleCollider2D circleCollider;
+    private Sprite lastSprite;
 
     private void Awake() {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
     }
 
     // Start is called before the first frame update
@@ -36,12 +40,13 @@ public class Asteroid : MonoBehaviour
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
         this.transform.localScale = Vector3.one * this.size;
 
-        _rigidbody.mass = this.size * 1.5f;
+        _rigidbody.mass = this.size * 2f;
+        
     }
 
     public void SetTrajectory(Vector2 direction) {
         _rigidbody.AddForce(direction * this.speed);
-
+        UpdateColliderSize();
         Destroy(this.gameObject, this.maxLifetime);
     }
 
@@ -64,7 +69,16 @@ public class Asteroid : MonoBehaviour
 
     private void destroyMe() {
         Instantiate(drop, this.transform.position, this.transform.rotation);
+        var temp = Instantiate(explosion, this.transform.position, this.transform.rotation);
+        Destroy(temp, 3);
         Destroy(this.gameObject);
+    }
+
+    private void UpdateColliderSize() {
+        Vector3 spriteHalfSize = _spriteRenderer.sprite.bounds.extents;
+        // circleCollider.radius = spriteHalfSize.x > spriteHalfSize.y ? spriteHalfSize.x : spriteHalfSize.y;
+        // lastSprite = _spriteRenderer.sprite;
+        circleCollider.radius = spriteHalfSize.x;
     }
 
 }

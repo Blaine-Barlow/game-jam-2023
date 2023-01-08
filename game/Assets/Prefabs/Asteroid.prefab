@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1083758870681936939}
   - component: {fileID: 3130329894589696523}
   - component: {fileID: 7628695009882615069}
-  - component: {fileID: 4708946173560577514}
   - component: {fileID: -6128255158884497288}
+  - component: {fileID: 8883206407936601175}
   m_Layer: 8
   m_Name: Asteroid
   m_TagString: asteroid
@@ -108,32 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4708946173560577514
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178474302988363156}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &-6128255158884497288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +133,20 @@ MonoBehaviour:
   xAngle: 1
   yAngle: 0
   drop: {fileID: 5768665414190157628, guid: ad5afe9fd4697b846917bdad6d41a49e, type: 3}
+  explosion: {fileID: 5178391386118846677, guid: 9c7664c8694bd024a9a510c21ce55f9d, type: 3}
+--- !u!58 &8883206407936601175
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178474302988363156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.64

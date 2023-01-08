@@ -27,7 +27,7 @@ public class PowerUp : MonoBehaviour
         _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
 
         this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
-        this.transform.localScale = Vector3.one * this.size;
+        // this.transform.localScale = Vector3.one * this.size;
 
         _rigidbody.mass = this.size;
     }
