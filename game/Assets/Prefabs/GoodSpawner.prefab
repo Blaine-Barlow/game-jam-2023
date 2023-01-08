@@ -52,9 +52,10 @@ MonoBehaviour:
   trajectoryVariance: 15
   spawnRate: 2
   spawnAmount: 1
-  spawnDistance: 15
+  spawnDistance: 16
   powerups:
   - {fileID: 6464200913820001731, guid: 32114b99e9b06e942a8e59dbb984f4c1, type: 3}
   - {fileID: 2093814649166335475, guid: cc011a5eb85f3974c997470ccb383576, type: 3}
   - {fileID: 677453175129577523, guid: 3db53da0e27c5ee48a6bb2ec4af06927, type: 3}
+  - {fileID: 4460303087605775834, guid: 9f83fbb18387e60479c306e1534d6f73, type: 3}
   powerUpSpawnRate: 1
