@@ -44,6 +44,15 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""leftclick"",
+                    ""type"": ""Button"",
+                    ""id"": ""36ac0cd4-6830-40d0-9f27-e1fa99916637"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,6 +121,17 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
                     ""action"": ""Turn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c83f248-ea84-4541-aade-72ece2833030"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""leftclick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -134,6 +154,7 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
         m_main = asset.FindActionMap("main", throwIfNotFound: true);
         m_main_Turn = m_main.FindAction("Turn", throwIfNotFound: true);
         m_main_Action = m_main.FindAction("Action", throwIfNotFound: true);
+        m_main_leftclick = m_main.FindAction("leftclick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -195,12 +216,14 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
     private IMainActions m_MainActionsCallbackInterface;
     private readonly InputAction m_main_Turn;
     private readonly InputAction m_main_Action;
+    private readonly InputAction m_main_leftclick;
     public struct MainActions
     {
         private @Input_controller m_Wrapper;
         public MainActions(@Input_controller wrapper) { m_Wrapper = wrapper; }
         public InputAction @Turn => m_Wrapper.m_main_Turn;
         public InputAction @Action => m_Wrapper.m_main_Action;
+        public InputAction @leftclick => m_Wrapper.m_main_leftclick;
         public InputActionMap Get() { return m_Wrapper.m_main; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -216,6 +239,9 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
                 @Action.started -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
                 @Action.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
                 @Action.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnAction;
+                @leftclick.started -= m_Wrapper.m_MainActionsCallbackInterface.OnLeftclick;
+                @leftclick.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnLeftclick;
+                @leftclick.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnLeftclick;
             }
             m_Wrapper.m_MainActionsCallbackInterface = instance;
             if (instance != null)
@@ -226,6 +252,9 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
                 @Action.started += instance.OnAction;
                 @Action.performed += instance.OnAction;
                 @Action.canceled += instance.OnAction;
+                @leftclick.started += instance.OnLeftclick;
+                @leftclick.performed += instance.OnLeftclick;
+                @leftclick.canceled += instance.OnLeftclick;
             }
         }
     }
@@ -243,5 +272,6 @@ public partial class @Input_controller : IInputActionCollection2, IDisposable
     {
         void OnTurn(InputAction.CallbackContext context);
         void OnAction(InputAction.CallbackContext context);
+        void OnLeftclick(InputAction.CallbackContext context);
     }
 }

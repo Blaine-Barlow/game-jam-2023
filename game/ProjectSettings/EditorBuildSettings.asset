@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Asteroids.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: a6ec20b6cedc8b84c9848b1c3b482509
+  - enabled: 1
+    path: Assets/Scenes/Blaine.unity
+    guid: 7a692fc662ea17747b23fce94497a021
   m_configObjects: {}
