@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4999395466201519825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4999395466201519824}
+  - component: {fileID: 4999395466201519839}
+  m_Layer: 0
+  m_Name: GoodSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4999395466201519824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999395466201519825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4999395466201519839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999395466201519825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f75f9c5ae29dee4fa2418c9b26ed8b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids:
+  - {fileID: 3372753311511910700, guid: 7191716b31936054493a28b05879e283, type: 3}
+  - {fileID: 8381162729516359730, guid: d4483d4cb55e5024180558a1c769ca45, type: 3}
+  - {fileID: 7304137236991621475, guid: dff672143ba55fb49b5611249ffaa2d1, type: 3}
+  - {fileID: 6677477341695172720, guid: 1dcf7d50902fe574fb51ad0a67855b3e, type: 3}
+  trajectoryVariance: 15
+  spawnRate: 2
+  spawnAmount: 1
+  spawnDistance: 15
+  powerups:
+  - {fileID: 6464200913820001731, guid: 32114b99e9b06e942a8e59dbb984f4c1, type: 3}
+  - {fileID: 2093814649166335475, guid: cc011a5eb85f3974c997470ccb383576, type: 3}
+  - {fileID: 677453175129577523, guid: 3db53da0e27c5ee48a6bb2ec4af06927, type: 3}
+  powerUpSpawnRate: 1
